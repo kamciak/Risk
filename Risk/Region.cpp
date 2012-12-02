@@ -3,7 +3,11 @@
 #include <cstdlib>
 #include <vector>
 #include <algorithm>
+
 #define ROLL_D6 rand()%6+1
+
+Region::Region(unsigned int id, std::string name): _name(name), _id(id){
+}
 
 void Region::setController(Player &player){
     _controller = &player;
@@ -13,12 +17,10 @@ void Region::addArmies(int num){
     _armies = (_armies + num < 0) ? 0 : _armies + num;
 }
 
-unsigned int Region::armyCount(){
-    return _armies;
-}
 
 void Region::addNeighbor(Region &nbor){
     _neighbors.push_back(&nbor);
+    nbor._neighbors.push_back(this);
 }
 
 void Region::attack(Region &target){
