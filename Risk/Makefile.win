@@ -1,7 +1,7 @@
 # Project: Risk
 # Compiler: Default GCC compiler
 # Compiler Type: MingW 3
-# Makefile created by wxDev-C++ IDE 7.4.2.569 on 24-11-12 17:33
+# Makefile created by wxDev-C++ IDE 7.4.2.569 on 02-12-12 21:15
 
 WXLIBNAME = wxmsw29u
 CPP       = g++.exe
@@ -45,10 +45,10 @@ Objects/MingW/RiskFrm.o: $(GLOBALDEPS) RiskFrm.cpp RiskFrm.h
 Objects/MingW/Board.o: $(GLOBALDEPS) Board.cpp
 	$(CPP) -c Board.cpp -o Objects/MingW/Board.o $(CXXFLAGS)
 
-Objects/MingW/Region.o: $(GLOBALDEPS) Region.cpp
+Objects/MingW/Region.o: $(GLOBALDEPS) Region.cpp Region.h
 	$(CPP) -c Region.cpp -o Objects/MingW/Region.o $(CXXFLAGS)
 
-Objects/MingW/Player.o: $(GLOBALDEPS) Player.cpp
+Objects/MingW/Player.o: $(GLOBALDEPS) Player.cpp Player.h
 	$(CPP) -c Player.cpp -o Objects/MingW/Player.o $(CXXFLAGS)
 
 Objects/MingW/Risk_private.res: Objects/MingW/Risk_private.rc RiskApp.rc 
