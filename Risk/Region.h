@@ -10,23 +10,33 @@ class Region{
 private:
     //Nazwa w³asna regionu
     std::string _name;
+
     //Lista regionów s¹siednich
     std::vector<Region*> _neighbors;
+
     //Gracz kontroluj¹cy region
     Player *_controller; 
+
     //Iloœæ armii gracza w regionie
     unsigned int _armies;   
+
     //Dodaje podany region do listy s¹siadów
     void addNeighbor(Region &nbor);
+
 public:
+
     ///Kontruktor, ustawia nazwê regionu
     Region(std::string name);
+
     ///Przekazuje graczowi kontrolê nad regionem
     void setController(Player &player);
+
     ///Przeprowadza walkê miêdzy tym regionem i wskazanym
     void attack(Region &target);
+
     ///Dodaje (lub usuwa) podan¹ liczbê armii z tego regionu
     void addArmies(int num);
+
     ///Zwraca iloœæ armii w regionie
     unsigned int armyCount();
     
