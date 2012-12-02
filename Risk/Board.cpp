@@ -6,7 +6,7 @@ Region &Board::getRegion(std::string name){
         if(_regions[i]._name == name)
             return _regions[i];
     }   
-    return _regions[0];
+    throw RegionNotFoundException();
 }
 
 Board::Board(){

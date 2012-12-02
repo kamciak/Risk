@@ -86,7 +86,7 @@ ProductName=
 ProductVersion=
 AutoIncBuildNrOnRebuild=0
 AutoIncBuildNrOnCompile=0
-UnitCount=12
+UnitCount=13
 
 [Profile1]
 ProfileName=MingW gcc
@@ -196,6 +196,16 @@ BuildCmd=
 
 [Unit12]
 FileName=Player.h
+CompileCpp=1
+Folder=
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit13]
+FileName=Exceptions.h
 CompileCpp=1
 Folder=
 Compile=1

@@ -1,7 +1,7 @@
 # Project: Risk
 # Compiler: Default GCC compiler
 # Compiler Type: MingW 3
-# Makefile created by wxDev-C++ IDE 7.4.2.569 on 02-12-12 22:35
+# Makefile created by wxDev-C++ IDE 7.4.2.569 on 02-12-12 22:43
 
 WXLIBNAME = wxmsw29u
 CPP       = g++.exe
@@ -36,19 +36,19 @@ clean: clean-custom
 $(BIN): $(OBJ)
 	$(LINK) $(LINKOBJ) -o "$(BIN)" $(LIBS) 
 
-Objects/MingW/RiskApp.o: $(GLOBALDEPS) RiskApp.cpp
+Objects/MingW/RiskApp.o: $(GLOBALDEPS) RiskApp.cpp RiskApp.h RiskFrm.h
 	$(CPP) -c RiskApp.cpp -o Objects/MingW/RiskApp.o $(CXXFLAGS)
 
-Objects/MingW/RiskFrm.o: $(GLOBALDEPS) RiskFrm.cpp
+Objects/MingW/RiskFrm.o: $(GLOBALDEPS) RiskFrm.cpp RiskFrm.h
 	$(CPP) -c RiskFrm.cpp -o Objects/MingW/RiskFrm.o $(CXXFLAGS)
 
-Objects/MingW/Board.o: $(GLOBALDEPS) Board.cpp
+Objects/MingW/Board.o: $(GLOBALDEPS) Board.cpp Board.h Exceptions.h Region.h
 	$(CPP) -c Board.cpp -o Objects/MingW/Board.o $(CXXFLAGS)
 
-Objects/MingW/Region.o: $(GLOBALDEPS) Region.cpp
+Objects/MingW/Region.o: $(GLOBALDEPS) Region.cpp Region.h
 	$(CPP) -c Region.cpp -o Objects/MingW/Region.o $(CXXFLAGS)
 
-Objects/MingW/Player.o: $(GLOBALDEPS) Player.cpp
+Objects/MingW/Player.o: $(GLOBALDEPS) Player.cpp Player.h
 	$(CPP) -c Player.cpp -o Objects/MingW/Player.o $(CXXFLAGS)
 
 Objects/MingW/Risk_private.res: Objects/MingW/Risk_private.rc RiskApp.rc 

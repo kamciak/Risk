@@ -2,6 +2,7 @@
 #define BOARD_H
 #include <vector>
 #include <iostream>
+#include "Exceptions.h"
 class Region;
 
 class Board{
