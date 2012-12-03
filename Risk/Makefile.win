@@ -1,14 +1,14 @@
 # Project: Risk
 # Compiler: Default GCC compiler
 # Compiler Type: MingW 3
-# Makefile created by wxDev-C++ IDE 7.4.2.569 on 02-12-12 22:43
+# Makefile created by wxDev-C++ IDE 7.4.2.569 on 03-12-12 23:32
 
 WXLIBNAME = wxmsw29u
 CPP       = g++.exe
 CC        = gcc.exe
 WINDRES   = "windres.exe"
-OBJ       = Objects/MingW/RiskApp.o Objects/MingW/RiskFrm.o Objects/MingW/Board.o Objects/MingW/Region.o Objects/MingW/Player.o Objects/MingW/Risk_private.res
-LINKOBJ   = "Objects/MingW/RiskApp.o" "Objects/MingW/RiskFrm.o" "Objects/MingW/Board.o" "Objects/MingW/Region.o" "Objects/MingW/Player.o" Objects/MingW/Risk_private.res
+OBJ       = Objects/MingW/RiskApp.o Objects/MingW/RiskFrm.o Objects/MingW/Board.o Objects/MingW/Region.o Objects/MingW/Player.o Objects/MingW/Controller.o Objects/MingW/Risk_private.res
+LINKOBJ   = "Objects/MingW/RiskApp.o" "Objects/MingW/RiskFrm.o" "Objects/MingW/Board.o" "Objects/MingW/Region.o" "Objects/MingW/Player.o" "Objects/MingW/Controller.o" Objects/MingW/Risk_private.res
 LIBS      = -L"C:/Program Files (x86)/Dev-Cpp/lib/wx/gcc_lib" -L"C:/Program Files (x86)/Dev-Cpp/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW32/lib" -mwindows -l$(WXLIBNAME) -l$(WXLIBNAME)_gl -lwxscintilla -lwxtiff -lwxjpeg -lwxpng -lwxzlib -lwxregexu -lwxexpat -lkernel32 -luser32 -lgdi32 -lcomdlg32 -lwinspool -lwinmm -lshell32 -lcomctl32 -lole32 -loleaut32 -luuid -lrpcrt4 -ladvapi32 -lwsock32 -lodbc32 -lopengl32  
 INCS      = -I"C:/Program Files (x86)/Dev-Cpp/MinGW32/include"
 CXXINCS   = -I"C:/Program Files (x86)/Dev-Cpp/MinGW32/include" -I"C:/Program Files (x86)/Dev-Cpp/" -I"C:/Program Files (x86)/Dev-Cpp/include/common"
@@ -42,7 +42,7 @@ Objects/MingW/RiskApp.o: $(GLOBALDEPS) RiskApp.cpp RiskApp.h RiskFrm.h
 Objects/MingW/RiskFrm.o: $(GLOBALDEPS) RiskFrm.cpp RiskFrm.h
 	$(CPP) -c RiskFrm.cpp -o Objects/MingW/RiskFrm.o $(CXXFLAGS)
 
-Objects/MingW/Board.o: $(GLOBALDEPS) Board.cpp Board.h Exceptions.h Region.h
+Objects/MingW/Board.o: $(GLOBALDEPS) Board.cpp Board.h Exceptions.h Region.h Region.h
 	$(CPP) -c Board.cpp -o Objects/MingW/Board.o $(CXXFLAGS)
 
 Objects/MingW/Region.o: $(GLOBALDEPS) Region.cpp Region.h
@@ -50,6 +50,9 @@ Objects/MingW/Region.o: $(GLOBALDEPS) Region.cpp Region.h
 
 Objects/MingW/Player.o: $(GLOBALDEPS) Player.cpp Player.h
 	$(CPP) -c Player.cpp -o Objects/MingW/Player.o $(CXXFLAGS)
+
+Objects/MingW/Controller.o: $(GLOBALDEPS) Controller.cpp Controller.h Player.h Board.h Exceptions.h Region.h
+	$(CPP) -c Controller.cpp -o Objects/MingW/Controller.o $(CXXFLAGS)
 
 Objects/MingW/Risk_private.res: Objects/MingW/Risk_private.rc RiskApp.rc 
 	$(WINDRES) --input-format=rc -o Objects/MingW/Risk_private.res $(RCINCS) Objects/MingW/RISK_P~1.RC -O coff

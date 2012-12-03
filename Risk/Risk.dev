@@ -1,7 +1,7 @@
 [Project]
 FileName=Risk.dev
 Name=Risk
-UnitCount=9
+UnitCount=11
 PchHead=-1
 PchSource=-1
 Ver=3
@@ -175,7 +175,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit10]
-FileName=Region.h
+FileName=Controller.h
 CompileCpp=1
 Folder=
 Compile=1
@@ -185,7 +185,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit11]
-FileName=Board.h
+FileName=Controller.cpp
 CompileCpp=1
 Folder=
 Compile=1
