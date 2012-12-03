@@ -4,8 +4,8 @@ object frmNewForm: TfrmNewForm
   AutoScroll = False
   BorderIcons = [biSystemMenu, biMinimize]
   Caption = 'Risk'
-  ClientHeight = 323
-  ClientWidth = 347
+  ClientHeight = 345
+  ClientWidth = 370
   Color = clAppWorkSpace
   OldCreateOrder = True
   PopupMenu = DesignerPopup.Owner
@@ -30,12 +30,12 @@ object frmNewForm: TfrmNewForm
   Wx_BorderAlignment = []
   isAuimanagerAvailable = False
   PixelsPerInch = 96
-  TextHeight = 15
+  TextHeight = 16
   object WxBoxSizer1: TWxBoxSizer
     Left = 0
     Top = 0
-    Width = 347
-    Height = 323
+    Width = 370
+    Height = 345
     Align = alClient
     TabOrder = 0
     Wx_Class = 'wxBoxSizer'

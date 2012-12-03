@@ -33,7 +33,7 @@
 #undef RiskFrm_STYLE
 #define RiskFrm_STYLE wxCAPTION | wxSYSTEM_MENU | wxMINIMIZE_BOX | wxCLOSE_BOX
 ////Dialog Style End
-
+#include "MenuDlg.h"
 class RiskFrm : public wxFrame
 {
 	private:
@@ -42,6 +42,7 @@ class RiskFrm : public wxFrame
 	public:
 		RiskFrm(wxWindow *parent, wxWindowID id = 1, const wxString &title = wxT("Risk"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxDefaultSize, long style = RiskFrm_STYLE);
 		virtual ~RiskFrm();
+		void WxButton1Click(wxCommandEvent& event);
 		
 	private:
 		//Do not add custom control declarations between
@@ -64,6 +65,7 @@ class RiskFrm : public wxFrame
 		};
 		
 	private:
+        MenuDlg * menu;
 		void OnClose(wxCloseEvent& event);
 		void CreateGUIControls();
 };

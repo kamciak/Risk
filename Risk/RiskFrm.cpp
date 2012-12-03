@@ -61,9 +61,23 @@ void RiskFrm::CreateGUIControls()
 	Center();
 	
 	////GUI Items Creation End
+		menu = new MenuDlg(this);
+	 menu->ShowModal();
 }
 
 void RiskFrm::OnClose(wxCloseEvent& event)
 {
 	Destroy();
+}
+
+/*
+ * WxButton1Click
+ */
+void RiskFrm::WxButton1Click(wxCommandEvent& event)
+{
+	// insert your code here
+	menu = new MenuDlg(this);
+
+	 menu->ShowModal();
+
 }
