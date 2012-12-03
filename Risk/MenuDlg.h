@@ -27,6 +27,7 @@
 //wxDev-C++ designer will remove them. Add custom headers after the block.
 ////Header Include Start
 #include <wx/bmpbuttn.h>
+#include <wx/statbmp.h>
 ////Header Include End
 #include <wx/dcbuffer.h>
 ////Dialog Style Start
@@ -54,9 +55,8 @@ class MenuDlg : public wxDialog
 		//wxDev-C++ will remove them. Add custom code after the block.
 		////GUI Control Declaration Start
 		wxBitmapButton *WxBitmapButton1;
-		////GUI Control Declaration End
-
 		wxStaticBitmap *WxStaticBitmap1;
+		////GUI Control Declaration End
 		
 	private:
 		//Note: if you receive any error with these enum IDs, then you need to
@@ -67,6 +67,7 @@ class MenuDlg : public wxDialog
 		{
 			////GUI Enum Control ID Start
 			ID_WXBITMAPBUTTON1 = 1008,
+			ID_WXSTATICBITMAP1 = 1007,
 			////GUI Enum Control ID End
 			ID_DUMMY_VALUE_ //don't remove this value unless you have other enum values
 		};
