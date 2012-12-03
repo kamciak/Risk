@@ -74,9 +74,7 @@ void MenuDlg::CreateGUIControls()
 	wxInitAllImageHandlers();   //Initialize graphic format handlers
 
 	wxBitmap WxBitmapButton1_BITMAP (_("zamknij.jpg"), wxBITMAP_TYPE_JPEG);
-	WxBitmapButton1 = new wxBitmapButton(this, ID_WXBITMAPBUTTON1, WxBitmapButton1_BITMAP, wxPoint(609, 36), wxSize(94, 20), wxTRANSPARENT_WINDOW | wxNO_BORDER | wxBU_AUTODRAW, wxDefaultValidator, _("WxBitmapButton1"));
-
-	WxStaticBitmap1 = new wxStaticBitmap(this, ID_WXSTATICBITMAP1, wxBitmap(_("C:/Users/Kamciak/Desktop/Risk/MenuDialog/Output/MingW/background.jpg"), wxBITMAP_TYPE_JPEG), wxPoint(0, 0), wxSize(800, 400) );
+	WxBitmapButton1 = new wxBitmapButton(this, ID_WXBITMAPBUTTON1, WxBitmapButton1_BITMAP, wxPoint(570, 34), wxSize(88, 19), wxTRANSPARENT_WINDOW | wxNO_BORDER | wxBU_AUTODRAW, wxDefaultValidator, _("WxBitmapButton1"));
 
 	SetTitle(_("MenuDlg"));
 	SetIcon(wxNullIcon);
