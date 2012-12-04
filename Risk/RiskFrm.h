@@ -26,7 +26,6 @@
 //Header Include Start and Header Include End.
 //wxDev-C++ designer will remove them. Add custom headers after the block.
 ////Header Include Start
-#include <wx/panel.h>
 #include <wx/sizer.h>
 ////Header Include End
 
@@ -43,14 +42,13 @@ class RiskFrm : public wxFrame
 	public:
 		RiskFrm(wxWindow *parent, wxWindowID id = 1, const wxString &title = wxT("Risk"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxDefaultSize, long style = RiskFrm_STYLE);
 		virtual ~RiskFrm();
-		void WxPanel1UpdateUI(wxUpdateUIEvent& event);
+		void WxButton1Click(wxCommandEvent& event);
 		
 	private:
 		//Do not add custom control declarations between
 		//GUI Control Declaration Start and GUI Control Declaration End.
 		//wxDev-C++ will remove them. Add custom code after the block.
 		////GUI Control Declaration Start
-		wxPanel *WxPanel1;
 		wxBoxSizer *WxBoxSizer1;
 		////GUI Control Declaration End
 		
@@ -62,15 +60,14 @@ class RiskFrm : public wxFrame
 		enum
 		{
 			////GUI Enum Control ID Start
-			ID_WXPANEL1 = 1002,
 			////GUI Enum Control ID End
 			ID_DUMMY_VALUE_ //don't remove this value unless you have other enum values
 		};
 		
 	private:
+        MenuDlg * menu;
 		void OnClose(wxCloseEvent& event);
 		void CreateGUIControls();
-		MenuDlg * menu;
 };
 
 #endif
