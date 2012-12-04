@@ -9,7 +9,7 @@
 ///------------------------------------------------------------------
 
 #include "RiskFrm.h"
-
+#include <wx/dcbuffer.h>
 //Do not add custom headers between
 //Header Include Start and Header Include End
 //wxDev-C++ designer will remove them
@@ -27,6 +27,8 @@ BEGIN_EVENT_TABLE(RiskFrm,wxFrame)
 	////Manual Code End
 	
 	EVT_CLOSE(RiskFrm::OnClose)
+	
+	EVT_UPDATE_UI(ID_WXPANEL1,RiskFrm::WxPanel1UpdateUI)
 END_EVENT_TABLE()
 ////Event Table End
 
@@ -34,6 +36,9 @@ RiskFrm::RiskFrm(wxWindow *parent, wxWindowID id, const wxString &title, const w
 : wxFrame(parent, id, title, position, size, style)
 {
 	CreateGUIControls();
+	
+	   menu=new MenuDlg(this);
+		menu->ShowModal();
 }
 
 RiskFrm::~RiskFrm()
@@ -52,6 +57,9 @@ void RiskFrm::CreateGUIControls()
 	this->SetSizer(WxBoxSizer1);
 	this->SetAutoLayout(true);
 
+	WxPanel1 = new wxPanel(this, ID_WXPANEL1, wxPoint(5, 5), wxSize(1360, 768));
+	WxBoxSizer1->Add(WxPanel1, 0, wxALIGN_CENTER | wxALL, 5);
+
 	SetTitle(_("Risk"));
 	SetIcon(wxNullIcon);
 	
@@ -61,8 +69,7 @@ void RiskFrm::CreateGUIControls()
 	Center();
 	
 	////GUI Items Creation End
-		menu = new MenuDlg(this);
-	 menu->ShowModal();
+
 }
 
 void RiskFrm::OnClose(wxCloseEvent& event)
@@ -71,13 +78,15 @@ void RiskFrm::OnClose(wxCloseEvent& event)
 }
 
 /*
- * WxButton1Click
+ * WxPanel1UpdateUI
  */
-void RiskFrm::WxButton1Click(wxCommandEvent& event)
+void RiskFrm::WxPanel1UpdateUI(wxUpdateUIEvent& event)
 {
 	// insert your code here
-	menu = new MenuDlg(this);
-
-	 menu->ShowModal();
-
+	wxImage::AddHandler( new wxJPEGHandler );
+	wxImage map("map.jpg");
+	wxBitmap Map(map);
+	wxClientDC dc(WxPanel1);
+	wxBufferedDC bdc(&dc);
+	bdc.DrawBitmap(Map,0,0,true);
 }

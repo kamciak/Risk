@@ -2,7 +2,7 @@
 ///
 /// @file      MenuDlg.h
 /// @author    Kamciak
-/// Created:   2012-12-03 19:50:34
+/// Created:   2012-12-04 01:56:54
 /// @section   DESCRIPTION
 ///            MenuDlg class declaration
 ///
@@ -26,13 +26,15 @@
 //Header Include Start and Header Include End.
 //wxDev-C++ designer will remove them. Add custom headers after the block.
 ////Header Include Start
+#include <wx/button.h>
 #include <wx/bmpbuttn.h>
-#include <wx/statbmp.h>
+#include <wx/checkbox.h>
+#include <wx/panel.h>
 ////Header Include End
-#include <wx/dcbuffer.h>
+
 ////Dialog Style Start
 #undef MenuDlg_STYLE
-#define MenuDlg_STYLE wxTRANSPARENT_WINDOW | wxDIALOG_NO_PARENT
+#define MenuDlg_STYLE wxSYSTEM_MENU | wxDIALOG_NO_PARENT | wxMINIMIZE_BOX | wxCLOSE_BOX
 ////Dialog Style End
 
 class MenuDlg : public wxDialog
@@ -42,20 +44,20 @@ class MenuDlg : public wxDialog
 		
 	public:
 		MenuDlg(wxWindow *parent, wxWindowID id = 1, const wxString &title = wxT("MenuDlg"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxDefaultSize, long style = MenuDlg_STYLE);
+		void WxBitmapButton1Click(wxCommandEvent& event);
 		virtual ~MenuDlg();
 		void WxPanel1UpdateUI(wxUpdateUIEvent& event);
 		void WxButton1Click(wxCommandEvent& event);
-		void MenuDlgActivate(wxActivateEvent& event);
-		void WxBitmapButton1Click(wxCommandEvent& event);
-		void WxBitmapButton1Click0(wxCommandEvent& event);
 	
 	private:
 		//Do not add custom control declarations between 
 		//GUI Control Declaration Start and GUI Control Declaration End.
 		//wxDev-C++ will remove them. Add custom code after the block.
 		////GUI Control Declaration Start
+		wxButton *WxButton1;
 		wxBitmapButton *WxBitmapButton1;
-		wxStaticBitmap *WxStaticBitmap1;
+		wxCheckBox *WxCheckBox1;
+		wxPanel *WxPanel1;
 		////GUI Control Declaration End
 		
 	private:
@@ -66,18 +68,17 @@ class MenuDlg : public wxDialog
 		enum
 		{
 			////GUI Enum Control ID Start
-			ID_WXBITMAPBUTTON1 = 1008,
-			ID_WXSTATICBITMAP1 = 1007,
+			ID_WXBUTTON1 = 1004,
+			ID_WXBITMAPBUTTON1 = 1003,
+			ID_WXCHECKBOX1 = 1002,
+			ID_WXPANEL1 = 1001,
 			////GUI Enum Control ID End
 			ID_DUMMY_VALUE_ //don't remove this value unless you have other enum values
 		};
 	
 	private:
-        wxImage ImgBackground, ImgTable, ImgClose;
 		void OnClose(wxCloseEvent& event);
 		void CreateGUIControls();
-		wxBitmap zamknij;
-		
 };
 
 #endif

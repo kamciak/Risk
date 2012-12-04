@@ -3,7 +3,7 @@
 #include <vector>
 #include <iostream>
 #include "Exceptions.h"
-class Region;
+#include "Region.h"
 
 class Board{
 private:
