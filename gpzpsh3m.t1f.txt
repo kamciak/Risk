@@ -1,0 +1,60 @@
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch TMP
+# You are currently rebasing.
+#   (all conflicts fixed: run "git rebase --continue")
+#
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	deleted:    Risk/Board.cpp
+#	deleted:    Risk/Board.h
+#	deleted:    Risk/Controller.cpp
+#	deleted:    Risk/Controller.h
+#	deleted:    Risk/Exceptions.h
+#	deleted:    Risk/Images/MenuDlg_WxBitmapButton1_XPM.xpm
+#	deleted:    Risk/Makefile.win
+#	deleted:    Risk/MenuDialog.cpp
+#	deleted:    Risk/MenuDialog.h
+#	deleted:    Risk/MenuDialog.wxform
+#	deleted:    Risk/MenuDlg.cpp
+#	deleted:    Risk/MenuDlg.h
+#	deleted:    Risk/MenuDlg.wxform
+#	deleted:    Risk/Objects/MingW/Board.o
+#	deleted:    Risk/Objects/MingW/Controller.o
+#	deleted:    Risk/Objects/MingW/MenuDialog.o
+#	deleted:    Risk/Objects/MingW/MenuDlg.o
+#	deleted:    Risk/Objects/MingW/Player.o
+#	deleted:    Risk/Objects/MingW/Region.o
+#	deleted:    Risk/Objects/MingW/RiskApp.o
+#	deleted:    Risk/Objects/MingW/RiskFrm.o
+#	deleted:    Risk/Objects/MingW/Risk_private.h
+#	deleted:    Risk/Objects/MingW/Risk_private.rc
+#	deleted:    Risk/Objects/MingW/Risk_private.res
+#	deleted:    Risk/Output/MingW/Images/background.jpg
+#	deleted:    Risk/Output/MingW/Risk.exe
+#	deleted:    Risk/Output/MingW/background.jpg
+#	deleted:    Risk/Output/MingW/background.png
+#	deleted:    Risk/Output/MingW/map.jpg
+#	deleted:    Risk/Output/MingW/table.jpg
+#	deleted:    Risk/Output/MingW/zamknij.jpg
+#	deleted:    Risk/Output/MingW/zamknij.png
+#	deleted:    Risk/Output/MingW/zamknij_hover.jpg
+#	deleted:    Risk/Player.cpp
+#	deleted:    Risk/Player.h
+#	deleted:    Risk/Region.cpp
+#	deleted:    Risk/Region.h
+#	deleted:    Risk/Risk.dev
+#	deleted:    Risk/Risk.layout
+#	deleted:    Risk/RiskApp.cpp
+#	deleted:    Risk/RiskApp.h
+#	deleted:    Risk/RiskApp.rc
+#	deleted:    Risk/RiskFrm.cpp
+#	deleted:    Risk/RiskFrm.h
+#	deleted:    Risk/RiskFrm.wxform
+#	deleted:    Risk/Thumbs.db
+#	deleted:    Risk/background.jpg
+#	deleted:    Thumbs.db
+#
+
