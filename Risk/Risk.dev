@@ -1,7 +1,7 @@
 [Project]
 FileName=Risk.dev
 Name=Risk
-UnitCount=12
+UnitCount=14
 PchHead=-1
 PchSource=-1
 Ver=3
@@ -175,6 +175,26 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit10]
+FileName=Controller.h
+CompileCpp=1
+Folder=
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit11]
+FileName=Controller.cpp
+CompileCpp=1
+Folder=
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit12]
 FileName=MenuDlg.h
 CompileCpp=1
 Folder=Risk
@@ -184,7 +204,7 @@ Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
 
-[Unit11]
+[Unit13]
 FileName=MenuDlg.cpp
 CompileCpp=1
 Folder=Risk
@@ -194,22 +214,11 @@ Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
 
-[Unit12]
+[Unit14]
 FileName=MenuDlg.wxform
-CompileCpp=1
 Folder=Risk
 Compile=0
 Link=0
-Priority=1000
-OverrideBuildCmd=0
-BuildCmd=
-
-[Unit13]
-FileName=Exceptions.h
-CompileCpp=1
-Folder=
-Compile=1
-Link=1
 Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
